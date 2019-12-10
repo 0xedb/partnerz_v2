@@ -1,0 +1,23 @@
+{
+  "name": "partnerz_v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "theBashShell <edohbruno@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gatsby develop"
+  },
+  "dependencies": {
+    "@elastic/eui": "^17.0.0",
+    "formik": "^2.0.7",
+    "gatsby": "^2.18.10",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.19.1"
+  }
+}
