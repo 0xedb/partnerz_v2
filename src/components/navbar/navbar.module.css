@@ -1,0 +1,41 @@
+.nav,
+.nav_content,
+.nav_item {
+    width: 100%;
+}
+
+.nav {
+    height: 40px;
+    background: #181817;
+    color: white;
+}
+
+.nav_content {
+    justify-content: space-around;
+}
+
+.nav_item,
+.nav_content {
+    height: 100%;
+}
+
+.nav_item {
+    justify-content: center;
+}
+
+.nav_icon {
+    height: 70%;
+}
+
+
+@media(min-width: 750px) {
+    .nav {
+        height: 50px;
+    }
+
+    .nav_menu {
+        display: none;
+        visibility: hidden;
+        width: 0;
+    }
+}
