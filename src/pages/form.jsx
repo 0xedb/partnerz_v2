@@ -1,12 +1,19 @@
 import React from 'react'
-import EmailSignIn from '../components/emailsignin/EmailSignIn'
+import LoginPage from '../components/loginpage/LoginPage'
+import NavBar from '../components/navbar/NavBar';
+
+const submitCallback = (values) =>
+  new Promise((resolve, reject) => {
+    if (values) resolve(values)
+    else reject(new Error('values required'))
+  })
 
 function Form() {
   return (
-    <div>
-      Form
-      <EmailSignIn />
-    </div>
+    <>
+      <NavBar />
+      <LoginPage {...{ submitCallback }} />
+    </>
   )
 }
 

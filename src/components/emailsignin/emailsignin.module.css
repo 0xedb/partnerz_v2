@@ -1,0 +1,16 @@
+.form { 
+    max-width: 540px;
+    display: flex; 
+}
+
+.form_container {
+    width: 95%;
+    max-width: 540px;
+    margin-top: -63px
+}
+
+.notification_container { 
+    position: relative;
+    top: -80px; 
+}
+ 

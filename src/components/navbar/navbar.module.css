@@ -8,6 +8,7 @@
     height: 40px;
     background: #181817;
     color: white;
+    position: absolute;
 }
 
 .nav_content {
