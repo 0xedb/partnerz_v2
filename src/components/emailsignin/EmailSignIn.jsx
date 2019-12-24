@@ -4,7 +4,9 @@ import {
   form,
   form_container,
   notification_container,
+  sign_in
 } from './emailsignin.module.css'
+import {centered} from '../../assets/css/app.module.css'
 import { Input } from 'baseui/input'
 import { Button } from 'baseui/button'
 import { ArrowRight } from 'baseui/icon'
@@ -75,6 +77,7 @@ function EmailSignIn({ submitCallback }) {
   }
 
   return (
+    <div className={`${sign_in} ${centered}`}>
     <div className={form_container}>
       {showNotification ? notification : null}
       <form
@@ -96,6 +99,7 @@ function EmailSignIn({ submitCallback }) {
           login <ArrowRight />
         </Button>
       </form>
+    </div>
     </div>
   )
 }

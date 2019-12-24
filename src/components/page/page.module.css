@@ -3,11 +3,10 @@
     width: 100%; 
     min-width: 300px;
     min-height: 300px;
-    background: wheat;
+    background: #5db907;
     position: absolute;
 }
 
 @media(min-width:750px) {
-    .app {  
-    }
+     
 }

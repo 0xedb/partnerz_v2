@@ -1,6 +1,7 @@
 import React from 'react'
-import LoginPage from '../components/loginpage/LoginPage'
-import NavBar from '../components/navbar/NavBar';
+import NavBar from '../components/navbar/NavBar'
+import Page from '../components/page/Page'
+import EmailSignIn from '../components/emailsignin/EmailSignIn'
 
 const submitCallback = (values) =>
   new Promise((resolve, reject) => {
@@ -11,8 +12,10 @@ const submitCallback = (values) =>
 function Form() {
   return (
     <>
-      <NavBar />
-      <LoginPage {...{ submitCallback }} />
+      <Page>
+        <NavBar />
+        <EmailSignIn {...{ submitCallback }} />
+      </Page>
     </>
   )
 }
