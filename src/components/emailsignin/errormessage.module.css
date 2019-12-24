@@ -1,0 +1,11 @@
+.div {
+	height: 40px; 
+	padding-left: 10px;
+	opacity: 0;
+	transition: all 0.8s ease 0.1s;
+}
+.error {
+	opacity: 1;
+	color: red;
+	transition: all 0.8s ease 0.1s;
+}

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useFormik } from 'formik'
+import ErrorMessage from './ErrorMessage'
 import {
   form,
   form_container,
   notification_container,
-  sign_in
+  sign_in,
 } from './emailsignin.module.css'
-import {centered} from '../../assets/css/app.module.css'
+import { centered } from '../../assets/css/app.module.css'
 import { Input } from 'baseui/input'
 import { Button } from 'baseui/button'
 import { ArrowRight } from 'baseui/icon'
@@ -15,15 +16,15 @@ import {
   KIND,
 } from 'baseui/notification'
 
-const validate = (values) => {
+const validate = async (values) => {
   const errors = {}
   const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-  if (!values.email) errors.email = 'required'
+  if (!values.email) errors.email = '* required'
   else if (
     !EMAIL_REGEX.test(values.email.toLowerCase())
   )
-    errors.email = 'invalid email'
+    errors.email = '* invalid email'
   return errors
 }
 
@@ -37,7 +38,7 @@ function EmailSignIn({ submitCallback }) {
     <Notification
       closeable
       kind={KIND.positive}
-      autoHideDuration={3000}
+      autoHideDuration={5000}
       className={notification_container}
       overrides={{
         Body: {
@@ -62,8 +63,10 @@ function EmailSignIn({ submitCallback }) {
       submitCallback(values)
         .then(() => {
           console.log(values)
-          setShowNotification(true)
-          //   formik.resetForm();
+        })
+        .then(() => setShowNotification(true))
+        .then(() => {
+          formik.resetForm()
         })
         .catch((err) => console.log(err))
     },
@@ -78,28 +81,39 @@ function EmailSignIn({ submitCallback }) {
 
   return (
     <div className={`${sign_in} ${centered}`}>
-    <div className={form_container}>
-      {showNotification ? notification : null}
-      <form
-        onSubmit={formik.handleSubmit}
-        className={`${form}`}
-      >
-        <Input
-          name="email"
-          type="email"
-          placeholder="example@example.com"
-          startEnhancer="@"
-          {...formik.getFieldProps('email')}
-        />
-
-        <Button
-          type="button"
-          onClick={handleFormSubmission}
+      <div className={form_container}>
+        <div>
+          {showNotification ? notification : null}
+          dafafd
+        </div>
+        <form
+          onSubmit={formik.handleSubmit}
+          className={`${form}`}
         >
-          login <ArrowRight />
-        </Button>
-      </form>
-    </div>
+          <Input
+            name="email"
+            type="email"
+            placeholder="example@example.com"
+            startEnhancer="@"
+            {...formik.getFieldProps('email')}
+          />
+
+          <Button
+            type="button"
+            onClick={handleFormSubmission}
+          >
+            login <ArrowRight />
+          </Button>
+        </form>
+        <ErrorMessage
+          err={
+            formik.touched.email &&
+            formik.errors.email
+              ? formik.errors.email
+              : null
+          }
+        />
+      </div>
     </div>
   )
 }
