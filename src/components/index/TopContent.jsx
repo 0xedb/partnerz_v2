@@ -4,6 +4,7 @@ import {
   container,
   info,
   filter,
+  tag, desc
 } from './topcontent.module.css'
 import { useLozad } from '../../hooks/lozad'
 import background_mob from '../../assets/images/img/main_bg_mob.jpg'
@@ -26,9 +27,13 @@ const TopContent = () => {
           media="(min-width: 0px)"
         />
       </picture>
-
       <section className={info}>
-        <div>mizess</div>
+        <div className={tag}>We're the Financial Architects</div>
+        <div className={desc}>
+          At Partnerz, we engineer and bring to
+          life the financial goals and aspirations
+          of hardworking people
+        </div>
       </section>
     </div>
   )
