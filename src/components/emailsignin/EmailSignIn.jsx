@@ -83,8 +83,7 @@ function EmailSignIn({ submitCallback }) {
     <div className={`${sign_in} ${centered}`}>
       <div className={form_container}>
         <div>
-          {showNotification ? notification : null}
-          dafafd
+          {showNotification ? notification : null} 
         </div>
         <form
           onSubmit={formik.handleSubmit}

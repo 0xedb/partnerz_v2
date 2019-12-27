@@ -3,6 +3,8 @@ import NavBar from '../components/navbar/NavBar'
 import Page from '../components/page/Page'
 import IndexTop from '../components/index/IndexTop'
 import HeadMeta from '../components/headmeta/HeadMeta'
+import Stack from '../components/stock/Stock'
+import TopContent from '../components/index/TopContent'
 
 function Index() {
   return (
@@ -15,7 +17,10 @@ function Index() {
       </HeadMeta>
       <Page>
         <NavBar />
-        <IndexTop />
+        <IndexTop> 
+          <TopContent />
+          <Stack />
+        </IndexTop>
       </Page>
     </>
   )

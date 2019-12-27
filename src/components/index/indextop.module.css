@@ -1,14 +1,13 @@
 .content {
-	height: calc(100vh - 40px);
-    background: #8a2626;
-    padding-top: 40px;
+  height: calc(100vh - 40px);
+  min-height: 390px;
+  padding-top: 40px;
 }
 
-
-
-@media(min-width:750px) {
-    .content {
-        height: calc(100vh - 50px);  
-        padding-top: unset;
-    }
+@media (min-width: 750px) {
+  .content {
+    height: calc(100vh - 50px);
+    min-height: 600px;
+    padding-top: unset;
+  }
 }
