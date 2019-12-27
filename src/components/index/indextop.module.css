@@ -1,13 +1,13 @@
 .content {
-  height: calc(100vh - 40px);
+  position: relative;
+  height: 100vh;
   min-height: 390px;
-  padding-top: 40px;
+  max-height: 700px; 
 }
 
 @media (min-width: 750px) {
   .content {
-    height: calc(100vh - 50px);
     min-height: 600px;
-    padding-top: unset;
+    max-height: 1100px;
   }
 }
