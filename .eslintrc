@@ -4,8 +4,8 @@
     "sourceType": "module",
     "ecmaFeatures": { "jsx": true }
   },
-  "rules": { 
-    "arrow-parens": "error", 
+  "rules": {
+    "arrow-parens": "error",
     "no-console": 0
   },
   "extends": ["prettier"]

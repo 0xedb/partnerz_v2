@@ -19,6 +19,7 @@
   );
   color: white;
   position: fixed;
+  z-index: 20;
 }
 
 .nav_content {

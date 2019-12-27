@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react'
 import { stock } from './stock.module.css'
-import lozad from 'lozad'
+import { useLozad } from '../../hooks/lozad'
 
 function Stock() {
-  useEffect(() => {
-    const observer = lozad() 
-    observer.observe()
-  }, [])
+  useLozad()
 
   return (
     <div className={stock}>
@@ -15,7 +12,7 @@ function Stock() {
         sandbox
         importance="low"
         scrolling="no"
-        className='lozad'
+        className="lozad"
       />
     </div>
   )
