@@ -25,14 +25,12 @@ const actionCodeSettings = {
 }
 
 const sendEmail = async (email) => {
-  firebase
+  return firebase
     .auth()
     .sendSignInLinkToEmail(
       email,
       actionCodeSettings
     )
-    .then((res) => res)
-    .catch((err) => err)
 }
 
 export { sendEmail }
