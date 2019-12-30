@@ -18,4 +18,13 @@ const CONFIG = {
 if (!firebase.apps.length) {
   firebase.initializeApp(CONFIG)
 }
+
+const actionCodeSettings = {
+  url: process.env.GATSBY_LOGIN_URL
+}
+
+const sendEmail = async (email) => {
+  
+}
+
 export { CONFIG }
