@@ -14,7 +14,7 @@ function NavBar() {
 	let menu;
 
 	const handleMenuClick = async () => {
-		import(/*webPackChunkName: mine*/ './../emailsignin/EmailSignIn').then(
+		import('./../emailsignin/EmailSignIn').then(
 			(a) => {
 				console.log(a);
 			}

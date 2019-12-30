@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "baseui": "^9.28.0",
+    "firebase": "^7.6.1",
     "formik": "^2.0.7",
     "gatsby": "^2.18.10",
     "gatsby-plugin-react-helmet": "^3.1.18",

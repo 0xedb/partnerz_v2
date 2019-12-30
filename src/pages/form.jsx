@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../components/navbar/NavBar'
 import Page from '../components/page/Page'
 import EmailSignIn from '../components/emailsignin/EmailSignIn'
+import {CONFIG} from '../util/firebase'
 
 const submitCallback = (values) =>
   new Promise((resolve, reject) => {
@@ -15,6 +16,7 @@ function Form() {
       <Page>
         <NavBar />
         <EmailSignIn {...{ submitCallback }} />
+        {console.log(CONFIG)}
       </Page>
     </>
   )
