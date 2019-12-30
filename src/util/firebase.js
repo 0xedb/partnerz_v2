@@ -20,11 +20,19 @@ if (!firebase.apps.length) {
 }
 
 const actionCodeSettings = {
-  url: process.env.GATSBY_LOGIN_URL
+  url: process.env.GATSBY_LOGIN_URL,
+  handleCodeInApp: true,
 }
 
-const sendEmail = async (email) => {
-  
+const sendEmail = async (email, handlers) => {
+  firebase
+    .auth()
+    .sendSignInLinkToEmail(
+      email,
+      actionCodeSettings
+    )
+    .then(handlers.success())
+    .catch((err) => handlers.failure(err))
 }
 
-export { CONFIG }
+export { sendEmail }
