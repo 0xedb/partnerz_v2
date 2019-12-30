@@ -24,15 +24,15 @@ const actionCodeSettings = {
   handleCodeInApp: true,
 }
 
-const sendEmail = async (email, handlers) => {
+const sendEmail = async (email) => {
   firebase
     .auth()
     .sendSignInLinkToEmail(
       email,
       actionCodeSettings
     )
-    .then(handlers.success())
-    .catch((err) => handlers.failure(err))
+    .then((res) => res)
+    .catch((err) => err)
 }
 
 export { sendEmail }
