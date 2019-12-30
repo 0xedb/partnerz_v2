@@ -59,13 +59,13 @@ function EmailSignIn({ submitCallback }) {
 
   const formik = useFormik({
     initialValues: { email: '' },
-    onSubmit: (values) => { 
+    onSubmit: async (values) => {
       submitCallback(values)
         .then(() => {
           console.log(values)
-           setShowNotification(true)
+          setShowNotification(true)
           formik.resetForm()
-        }) 
+        })
         .catch((err) => console.log(err))
     },
     validate,
@@ -81,7 +81,7 @@ function EmailSignIn({ submitCallback }) {
     <div className={`${sign_in} ${centered}`}>
       <div className={form_container}>
         <div>
-          {showNotification ? notification : null} 
+          {showNotification ? notification : null}
         </div>
         <form
           onSubmit={formik.handleSubmit}
