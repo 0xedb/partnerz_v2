@@ -33,4 +33,4 @@ const sendEmail = async (email) => {
     )
 }
 
-export { sendEmail }
+export { sendEmail, firebase }
