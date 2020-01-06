@@ -1,4 +1,8 @@
+* {
+  transition: all 0.5s ease;
+}
+
 .centered {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }

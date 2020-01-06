@@ -28,7 +28,7 @@ const validate = async (values) => {
   return errors
 }
 
-function EmailSignIn({ submitCallback }) {
+function EmailSignIn({ submitCallback, toast }) {
   const [
     showNotification,
     setShowNotification,
@@ -82,6 +82,7 @@ function EmailSignIn({ submitCallback }) {
       <div className={form_container}>
         <div>
           {showNotification ? notification : null}
+          {toast}
         </div>
         <form
           onSubmit={formik.handleSubmit}

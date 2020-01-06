@@ -2,10 +2,33 @@ import React, { useEffect, useState } from 'react'
 import { useLogin } from '../hooks/login'
 import Page from '../components/page/Page'
 import EmailSignIn from '../components/emailsignin/EmailSignIn'
+import {
+  Notification,
+  KIND,
+} from 'baseui/notification'
 
 const SignIn = (
+  // add callback to emailsign in
   <Page>
-    <EmailSignIn />
+    <EmailSignIn
+      toast={
+        <Notification
+          kind={KIND.warning}
+          closeable
+          autoHideDuration={5000}
+          overrides={{
+            Body: {
+              style: {
+                width: 'auto',
+                textAlign: 'center',
+              },
+            },
+          }}
+        >
+          {() => 'Enter email again to login'}
+        </Notification>
+      }
+    />
   </Page>
 )
 
