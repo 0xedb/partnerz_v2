@@ -19,21 +19,19 @@ export const useLogin = () => {
         .isSignInWithEmailLink(
           window.location.href
         )
-    ) {  
+    ) {
       setLoginKind(email)
       const userEmail = window.localStorage.getItem(
         user
       )
-      
-      if (!userEmail) { 
-        // use external login
+
+      if (!userEmail) {
         setLoginKind(external)
       }
     } else {
-      // redirect to home
       setLoginKind(direct)
     }
-  },[])
+  }, [])
 
   return loginKind
 }
