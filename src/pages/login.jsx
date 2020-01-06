@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useLogin } from '../hooks/login'
+import Page from '../components/page/Page'
+import EmailSignIn from '../components/emailsignin/EmailSignIn'
+
+const SignIn = (
+  <Page>
+    <EmailSignIn />
+  </Page>
+)
 
 const login = () => {
   const loginType = useLogin()
@@ -11,7 +19,7 @@ const login = () => {
         break
       }
       case 'external': {
-        setNextPage(<h1>hello</h1>)
+        setNextPage(SignIn)
         break
       }
       case 'direct': {
