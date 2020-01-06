@@ -19,11 +19,11 @@ const TopContent = () => {
         data-alt="background image"
       >
         <source
-          srcset={background_desk}
+          srcSet={background_desk}
           media="(min-width: 750px)"
         />
         <source
-          srcset={background_mob}
+          srcSet={background_mob}
           media="(min-width: 0px)"
         />
       </picture>
