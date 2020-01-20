@@ -1,7 +1,13 @@
 .main {
   display: flex;
-  flex-flow: column;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
+  text-align: center;
+}
+
+.firm {
+  width: 90%;
+  max-width: 800px;
 }
