@@ -1,16 +1,23 @@
 import React from 'react'
-import { Card, StyledBody } from 'baseui/card'
-import { s_card } from './service.module.css'
+import {
+  s_card,
+  card,
+  img,
+} from './service.module.css'
 
-const Service = ({info}) => {
+const Service = ({ info, heading, pic }) => {
   return (
-    <Card>
+    <div className={card}>
+      <img
+        src={pic}
+        alt={heading}
+        className={img}
+      />
+      <h2>{heading}</h2>
       <div className={s_card}>
-        <StyledBody>
-          {info}
-        </StyledBody>
+        <div>{info}</div>
       </div>
-    </Card>
+    </div>
   )
 }
 
