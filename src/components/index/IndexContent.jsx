@@ -3,6 +3,8 @@ import {
   main,
   firm,
   services,
+  quote,
+  words,stability
 } from './indexcontent.module.css'
 import { credit } from '../../assets/css/app.module.css'
 import Service from '../service/Service'
@@ -15,24 +17,27 @@ const IndexContent = () => {
   return (
     <>
       <main className={main}>
-        <div>
+        <div className={stability}>
           Financial stability for everyone, by the
           experts
         </div>
         <div className={firm}>
           <div>
             <img
-              src="https://api.iconify.design/vaadin:quote-left.svg"
+              className={quote}
+              src="https://api.iconify.design/vaadin:quote-left.svg?color=%23969696"
               alt="quote"
             />
           </div>
-          Partnerz FP is an advisory firm with a
-          daring quest to use financial structures
-          to affect lives positively.We are
-          responsible for crafting world - class
-          financial solutions that touches
-          individuals, corporates, and
-          governments.
+          <p className={words}>
+            Partnerz FP is an advisory firm with a
+            daring quest to use financial
+            structures to affect lives
+            positively.We are responsible for
+            crafting world - class financial
+            solutions that touches individuals,
+            corporates, and governments.
+          </p>
         </div>
       </main>
       <section id="services">
@@ -54,7 +59,7 @@ const IndexContent = () => {
           >
             Background vector created by
             rawpixel.com - www.freepik.com
-          </a> 
+          </a>
           <Service
             heading="Investments"
             pic={investment}

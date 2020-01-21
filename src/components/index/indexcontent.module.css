@@ -7,6 +7,20 @@
   text-align: center;
 }
 
+.quote {
+  padding-top: 20px;
+  height: 30px;
+}
+
+.words {
+  font-size: 18px;
+}
+
+.stability {
+  font-family: Caveat;
+  font-size: 30px;
+}
+
 .firm {
   width: 90%;
   max-width: 800px;
@@ -16,7 +30,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   min-width: 300px;
   width: 95%;
   max-width: 1200px;
@@ -26,5 +40,13 @@
 @media (min-width: 750px) {
   .services {
     flex-flow: row wrap;
+  }
+
+  .quote {
+    height: 40px;
+  }
+
+  .words {
+    font-size: 22px;
   }
 }
