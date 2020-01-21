@@ -10,12 +10,12 @@
   background: -webkit-linear-gradient(
     to right,
     #0e1113,
-    #3c4463
+    #0e0f13
   );
   background: linear-gradient(
     to right,
     #0e1113,
-    #3c4463
+    #0e0f13
   );
   color: white;
   position: fixed;
@@ -42,11 +42,5 @@
 @media (min-width: 750px) {
   .nav {
     height: 50px;
-  }
-
-  /* .nav_menu {
-    display: none;
-    visibility: hidden;
-    width: 0;
-  } */
+  } 
 }
