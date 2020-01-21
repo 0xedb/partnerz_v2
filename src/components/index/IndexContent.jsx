@@ -33,7 +33,7 @@ const IndexContent = () => {
             Partnerz FP is an advisory firm with a
             daring quest to use financial
             structures to affect lives
-            positively.We are responsible for
+            positively. We are responsible for
             crafting world - class financial
             solutions that touches individuals,
             corporates, and governments.
