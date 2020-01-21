@@ -10,3 +10,12 @@ html {
   display: flex;
   align-items: center;
 }
+
+.credit {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  z-index: -10000;
+}
