@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap');
+
 * {
   transition: all 0.5s ease;
 }
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Ubuntu', sans-serif;  
 }
 
 .centered {
