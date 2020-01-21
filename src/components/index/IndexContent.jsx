@@ -54,7 +54,7 @@ const IndexContent = () => {
           >
             Background vector created by
             rawpixel.com - www.freepik.com
-          </a>
+          </a> 
           <Service
             heading="Investments"
             pic={investment}
